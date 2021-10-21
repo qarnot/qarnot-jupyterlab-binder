@@ -1,4 +1,4 @@
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/oumnix/jupyterlab_binder/HEAD?urlpath=%2Ftree%2Fjupyterlab.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/qarnot/qarnot-jupyterlab-binder/HEAD?urlpath=%2Ftree%2Fjupyterlab.ipynb)
 
 # Table of Contents
 - [Table of Contents](#table-of-contents)
@@ -28,7 +28,7 @@ Below is how to launch a JupyterLab instance on Qarnot through a Jupyter noteboo
 
 ## How to run
 
-* You can click on the following button to launch the notebook on Binder [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/oumnix/jupyterlab_binder/HEAD?urlpath=%2Ftree%2Fjupyterlab.ipynb).
+* You can click on the following button to launch the notebook on Binder [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/qarnot/qarnot-jupyterlab-binder/HEAD?urlpath=%2Ftree%2Fjupyterlab.ipynb).
 * You should get access to the following page on your browser
   
 ![Initial Interface](screenshots/jupyterlab-1.png)
