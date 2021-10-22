@@ -50,9 +50,12 @@ def submit_task(param_dict):
         token = 'http://localhost:8888/lab?token='
 
         # Delete old log file if present (to avoid fetching previous token)
-        if list(output_bucket.directory(directory='logs/'))[0].key==remote_log:
+        try:
             logger.debug("Purging previous logs...")
-            output_bucket.delete_file(remote_log)
+            if list(output_bucket.directory(directory='logs/'))[0].key==remote_log:
+                output_bucket.delete_file(remote_log)
+        except IndexError:
+            logger.debug("No logs found...")
 
         # Append previous output bucket to inputs if bool is true
         if param_dict['use_output_bucket']:
@@ -97,7 +100,7 @@ def submit_task(param_dict):
 
 def get_link(output_bucket, token, remote_log):
     log_file='outputs_binder/'+remote_log
-    output_bucket.get_file(remote='logs/qarnot.log', local=log_file)
+    output_bucket.get_file(remote=remote_log, local=log_file)
     results=[]
     with open(log_file, 'r') as myFile:
         for line in myFile:
