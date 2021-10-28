@@ -57,6 +57,7 @@ Below is how to launch a JupyterLab instance on Qarnot through a Jupyter noteboo
 In order to launch the JupyterLab instance on Qarnot, the user has to fill-in the following parameters
 * Your secret Qarnot token
 * Your public SSH key
+* Optional task and bucket names
 * Select which software package you want to use : corresponds to a docker image containing different pre-installed Machine Learning & Deep Learning libraries.
 * Upload your input files: can be data files, text files, any type of file you want to use with your JupyterLab instance.
 * Choose wether you want to use your previous output bucket as an input bucket. This is mainly useful if you want to continue working on your previous notebook with any python packages you may have installed previously.
