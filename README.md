@@ -64,6 +64,7 @@ In order to launch the JupyterLab instance on Qarnot, the user has to fill-in th
   
 ### Note about reusing output bucket
 * There is a an optional check box to use the previous output bucket as an input bucket.
+* You can change the name of which output bucket you want to use with the text field.
 * This feature is used for picking up where you last left off from your work session on Qarnot.
 * It can contain the following files: 
   * your previous notebooks along with their respective checkpoints so you can continue to work on them in a seamless way

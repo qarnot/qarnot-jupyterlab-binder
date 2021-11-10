@@ -59,7 +59,7 @@ def submit_task(param_dict):
 
         # Append previous output bucket to inputs if bool is true
         if param_dict['use_output_bucket']:
-            task.resources.append(output_bucket)
+            task.resources.append(conn.retrieve_bucket(param_dict['prev_out_bucket']))
 
         # Submit the task
         logger.debug("Launching task...")    
