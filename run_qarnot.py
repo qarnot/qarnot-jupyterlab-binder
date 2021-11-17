@@ -18,7 +18,7 @@ def submit_task(param_dict):
         conn = qarnot.Connection(client_token=param_dict['token'])
 
         logger.debug("Creating task...")
-        task = conn.create_task(param_dict['task'], 'docker-network-ssh', 1)
+        task = conn.create_task(param_dict['task'], 'jupyterlab', 1)
 
         # Create an input bucket and attach it to the task
         logger.debug("Provisionning input bucket...")
@@ -34,7 +34,6 @@ def submit_task(param_dict):
         task.constants['DOCKER_SSH'] = param_dict['ssh_key']
         task.constants['DOCKER_REPO'] = param_dict['soft']
         task.constants['DOCKER_TAG'] = "v1"
-        task.constants['DOCKER_CMD'] = "/bin/bash /opt/start_jupyterlab.sh"
 
         task.snapshot(5)
 
@@ -92,7 +91,6 @@ def submit_task(param_dict):
                         link_done = True
             
         logger.debug("JupyterLab is ready...")
-        # task.download_results('outputs_binder')
         return (ssh_forward_port, jupyter_link, uuid)
     
     except Exception:
